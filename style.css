@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* fonts */
+.lato-thin {
+  font-family: "Lato", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+/* end fonts */
+
+*,
+* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.zoom-n-hide {
+  display: none;
+}
+
+/* main content */
+.content {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+}
+
+.content-container {
+  padding: 10px 20px 40px 20px;
+  background-color: #10101060;
+  border-radius: 10px;
+}
+
+.content-container .title {
+  margin-bottom: 10px;
+}
+
+.content-container .sub-title {
+  margin-bottom: 18px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.content-container .description {
+  line-height: 1.25;
+  opacity: 0.8;
+
+  margin-bottom: 40px;
+}
+
+.content-container a {
+  display: block;
+  color: #408888;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  width: fit-content;
+}
+.content-container a svg {
+  fill: #408888;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+/* end main content */
