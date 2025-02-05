@@ -9,16 +9,19 @@
   </head>
   <body>
     <div class="main-page lato-regular">
-      <div class="zoom-n-hide">
+      <div class="zoom-n-hide" id="click-me" onclick="clickHanlder()">
         <div class="zoom-n-hide__container">
           <h2 class="zoom-n-hide__container__word">
             <span class="zoom-n-hide__container__word__letter lato-bold">T</span
             >ohid
           </h2>
+          <p class="zoom-n-hide__container__sub-word">
+            Click me and I'll zoom 🤠
+          </p>
         </div>
       </div>
 
-      <div class="content">
+      <div class="content" id="main-content">
         <div class="content-container">
           <h1 class="title lato-bold">Yooo :D</h1>
           <p class="sub-title lato-light">Welcome to main content</p>
@@ -42,5 +45,94 @@
         </div>
       </div>
     </div>
+    <div class="extra">
+      <h2>Scrolling Content</h2>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+
+      <p class="description">
+        Paragraphs Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
+        aliquet vel, dapibus id, mattis vel, nisi. Sed pretium.
+      </p>
+    </div>
   </body>
+  <script>
+    let mainContent = document.querySelector("#main-content");
+    let clickableSection = document.querySelector("#click-me");
+    clickableSection.addEventListener("transitionend", function () {
+      clickableSection.style.display = "none";
+    });
+
+    const clickHanlder = (e) => {
+      window.scrollTo({ top: 0 });
+      clickableSection.classList.add("action");
+
+      mainContent.classList.add("action");
+    };
+  </script>
 </html>

@@ -72,19 +72,81 @@
   border: 0;
   outline: 0;
   background: transparent;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {
   background-color: #1e1e1e;
-  color: #ffffff;
 }
 
+/* ZOOM and HIDE */
 .zoom-n-hide {
-  display: none;
+  cursor: pointer;
+  position: fixed;
+  z-index: 999999;
+  background-color: #408888;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 3s;
 }
+.zoom-n-hide__container__word {
+  display: block;
+  position: relative;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  margin: auto;
+}
+.zoom-n-hide__container__sub-word {
+  margin-top: 20px;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.zoom-n-hide__container__word,
+.zoom-n-hide__container__sub-word,
+.zoom-n-hide__container__word__letter {
+  transition: all ease-in 2s;
+  display: inline-block;
+}
+
+.action.zoom-n-hide {
+  opacity: 0;
+  cursor: default;
+}
+
+.action .zoom-n-hide__container__word {
+  scale: 10;
+  opacity: 0;
+}
+
+.action .zoom-n-hide__container__sub-word {
+  scale: 0;
+}
+.action .zoom-n-hide__container__word .zoom-n-hide__container__word__letter {
+  color: #1e1e1e;
+  position: relative;
+  transform: translateX(10%);
+  font-size: 50px;
+  scale: 30;
+}
+
+/* end ZOOM and HIDE */
 
 /* main content */
 .content {
+  color: #ffffff;
   display: flex;
   align-items: center;
   min-height: 100vh;
@@ -95,8 +157,17 @@ body {
 
 .content-container {
   padding: 10px 20px 40px 20px;
-  background-color: #10101060;
+  background-color: #10101030;
   border-radius: 10px;
+  border: solid 1px #e0e0e010;
+  scale: 0.5;
+  -webkit-box-shadow: 10px 10px 13px -5px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 10px 10px 13px -5px rgba(0, 0, 0, 0.35);
+  box-shadow: 10px 10px 13px -5px rgba(0, 0, 0, 0.35);
+}
+.action .content-container {
+  transition: all ease-in-out 2.5s;
+  scale: 1;
 }
 
 .content-container .title {
@@ -118,8 +189,8 @@ body {
 
 .content-container a {
   display: block;
-  color: #408888;
   position: relative;
+  color: #408888;
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -133,3 +204,20 @@ body {
 }
 
 /* end main content */
+
+/* extra */
+.extra h2 {
+  color: #f1f1f1;
+  margin-bottom: 50px;
+  padding: 0 10px;
+  padding-top: 50px;
+}
+
+.extra .description {
+  padding: 0px 10px;
+  color: #f1f1f1;
+  line-height: 1.25;
+  opacity: 0.8;
+
+  margin-bottom: 40px;
+}
